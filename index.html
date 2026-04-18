@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for PairPlate — meal-planning iOS app.">
+  <title>PairPlate — Privacy Policy</title>
+  <style>
+    :root {
+      --accent: #E48B44;
+      --ink: #1c1c1e;
+      --muted: #6b6b6f;
+      --rule: #e6e6e8;
+      --bg: #ffffff;
+      --bg-soft: #faf7f3;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #f5f5f7;
+        --muted: #a1a1a6;
+        --rule: #2c2c2e;
+        --bg: #1c1c1e;
+        --bg-soft: #2c2419;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+    }
+    header {
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+    .brand-mark {
+      display: inline-block;
+      width: 22px;
+      height: 12px;
+      position: relative;
+    }
+    .brand-mark::before, .brand-mark::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .brand-mark::before { left: 0; }
+    .brand-mark::after { left: 9px; }
+    h1 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+    .updated {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    .lede {
+      background: var(--bg-soft);
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin: 0 0 32px;
+      font-size: 17px;
+    }
+    .lede strong { color: var(--ink); }
+    h2 {
+      font-size: 22px;
+      line-height: 1.3;
+      margin: 40px 0 12px;
+      letter-spacing: -0.005em;
+    }
+    h3 {
+      font-size: 17px;
+      margin: 24px 0 8px;
+    }
+    p { margin: 0 0 14px; }
+    ul {
+      margin: 0 0 14px;
+      padding-left: 22px;
+    }
+    li { margin-bottom: 6px; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 120ms ease;
+    }
+    a:hover { border-bottom-color: var(--accent); }
+    code {
+      font: 14.5px/1.4 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      background: var(--bg-soft);
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 40px 0;
+    }
+    footer {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand"><span class="brand-mark" aria-hidden="true"></span>PairPlate</div>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: April 17, 2026</p>
+    </header>
+
+    <p class="lede">
+      <strong>PairPlate doesn't collect, transmit, or share personal data.</strong>
+      Your taste profile, ratings, plans, pantry, and settings live only on your device.
+      We don't have servers, accounts, or user databases. The only outbound network traffic
+      happens if you choose to enable LLM-backed features by entering your own Anthropic API key —
+      in which case your requests go directly from your device to Anthropic's API, not through us.
+    </p>
+
+    <h2>What data PairPlate handles</h2>
+    <p>
+      All of the following is stored locally on your device using Apple's SwiftData framework.
+      None of it leaves your device unless you explicitly enable an LLM feature with your own API key
+      (see <a href="#llm">Optional LLM features</a> below).
+    </p>
+    <ul>
+      <li><strong>Onboarding choices</strong>: zip code, household size, dietary restrictions, household members and their dislikes, time-of-week preference.</li>
+      <li><strong>Taste profile</strong>: your answers to "would you rather cook A or B?" pairs, used to build a preference fingerprint.</li>
+      <li><strong>Generated plans, carts, and shopping lists.</strong></li>
+      <li><strong>Cooking history</strong>: which recipes you started, finished, abandoned, and rated.</li>
+      <li><strong>Pantry</strong>: ingredients auto-stocked from submitted carts and from receipt scans, with their shelf-life timestamps.</li>
+      <li><strong>Recipe library</strong>: includes the bundled seed corpus plus any recipes you create or import.</li>
+      <li><strong>App-internal event log</strong>: timestamps of in-app actions used to compute the on-device analytics dashboard.</li>
+    </ul>
+
+    <p>We do <strong>not</strong> collect:</p>
+    <ul>
+      <li>Real names, email addresses, phone numbers, or any other contact information.</li>
+      <li>Device identifiers (IDFA, IDFV) for tracking.</li>
+      <li>Location beyond the zip code you enter.</li>
+      <li>Health, financial, or biometric data.</li>
+      <li>Photos, videos, or any other media beyond what you explicitly capture for the in-app vision features (see below).</li>
+    </ul>
+
+    <h2>Camera and photo library</h2>
+    <p>Two app features ask for permission to use the camera or the photo library:</p>
+    <ul>
+      <li><strong>Fridge-finder</strong>: photograph the inside of your fridge so the app can identify ingredients and suggest recipes.</li>
+      <li><strong>Receipt parser</strong>: photograph a grocery receipt so the app can extract line items and stock your pantry.</li>
+    </ul>
+    <p>
+      Photos are used <strong>only</strong> to make a single request to the LLM service you've configured
+      (see below) and are not retained on disk by PairPlate after the request completes.
+      We do not upload photos to any server we control. We do not have any server.
+    </p>
+    <p>
+      You can revoke camera or photo-library access at any time in
+      iOS Settings → Privacy → Camera / Photos → PairPlate.
+    </p>
+
+    <h2 id="llm">Optional LLM features (Anthropic API)</h2>
+    <p>
+      PairPlate can use Anthropic's Claude API to power optional features: explainers, substitutions,
+      the cooking-mode coach, novel-recipe generation, recipe imports, fridge identification, and receipt parsing.
+    </p>
+    <p>
+      These features are <strong>off by default</strong>. To enable them, you paste your own Anthropic API key
+      into Settings → Cooking coach. The key is stored in your device's iOS Keychain and is never transmitted
+      to any server we control.
+    </p>
+    <p>
+      When an LLM feature is invoked, your device sends a request <strong>directly to <code>api.anthropic.com</code></strong>.
+      The request includes:
+    </p>
+    <ul>
+      <li>The system + user prompt for that feature.</li>
+      <li>The relevant context (e.g., the recipe step, the pasted recipe text, the fridge photo, the receipt photo).</li>
+      <li>Your API key in the <code>x-api-key</code> header.</li>
+    </ul>
+    <p>
+      These requests are subject to Anthropic's privacy policy, available at
+      <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>.
+      We have no visibility into them.
+    </p>
+    <p>
+      If you remove your API key (Settings → Cooking coach → Remove), all LLM features fall back to
+      deterministic on-device stubs and no further outbound requests are made.
+    </p>
+
+    <h2>Analytics, advertising, and tracking</h2>
+    <p>PairPlate contains:</p>
+    <ul>
+      <li><strong>No third-party analytics SDKs</strong> (no Firebase, Mixpanel, Amplitude, etc.).</li>
+      <li><strong>No advertising SDKs.</strong></li>
+      <li><strong>No tracking</strong> as defined by Apple's App Tracking Transparency framework.</li>
+    </ul>
+    <p>
+      The app's privacy manifest (<code>PrivacyInfo.xcprivacy</code>) declares no collected data types
+      and no tracking domains.
+    </p>
+    <p>
+      The on-device "Dashboard" view computes summary metrics (plan approval rate, cooking completion rate, etc.)
+      from your local event log. These metrics never leave the device.
+    </p>
+
+    <h2>Crash reporting</h2>
+    <p>
+      PairPlate uses Apple's built-in <strong>MetricKit</strong> framework for crash reporting.
+      MetricKit deliveries are processed by iOS and may be shared with Apple under their standard
+      developer crash-reporting flow if you have
+      <em>Settings → Privacy &amp; Security → Analytics &amp; Improvements → Share with App Developers</em> enabled.
+      We do not run any third-party crash-reporting service (no Sentry, Crashlytics, etc.).
+    </p>
+
+    <h2>Children</h2>
+    <p>
+      PairPlate is not directed at children under 13 and does not knowingly collect data from children.
+      The app does not require an account, has no social features, and contains no in-app purchases or advertising.
+    </p>
+
+    <h2>Data deletion</h2>
+    <p>
+      Because all data lives only on your device, you can delete everything PairPlate knows about you
+      by deleting the app. There is no separate deletion request to file with us, because we don't hold the data.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      If this policy materially changes, we'll update the "Last updated" date at the top and,
+      where reasonable, surface the change in-app on the next update.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Questions about this policy? Email <a href="mailto:privacy@your-domain.example">privacy@your-domain.example</a>.
+    </p>
+
+    <footer>
+      Hosted on GitHub Pages. Source:
+      <a href="https://github.com/">github.com/&lt;you&gt;/pairplate-privacy</a>.
+    </footer>
+  </main>
+</body>
+</html>
